@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "utf-8">
+	<title>Ian Gard Geospatial Portfolio</title>
+	<link rel = "stylesheet" href = "css/portfolio.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=QuattrocentoSans">
+	<script src = "https://kit.fontawesome.com/a2e3656b7a.js" crossorigin = "anonymous"></script>
+	<script src = "js/portfolio.js"></script>
+</head>
+
+<body>
+<main class = "wrapper">
+
+<nav>
+	<div id = "navContents">
+	<div id = "navHeading">
+	<h1>Ian Gard</h1>
+	<h2>Geospatial Portfolio</h2>
+    </div>
+    <div id = "navLinks">
+	<a class = "active" href = "#aboutme">About</a>
+	<a href = "#resume">Resume</a>
+	<a href = "#projects">Projects</a>
+	<a href = "#contact">Contact</a>
+    </div>
+    </div>
+</nav>
+
+<div class = "slideshow">
+
+	<div class = "mySlides">
+		<img src = "images/Boone5.jpg" style = "width:100%" alt = "Boone, North Carolina">
+		<p class = "intro-text">Ian Gard<br>Geospatial Portfolio</p>
+	</div>
+
+	<div class = "mySlides">
+		<img src = "images/Boone5.jpg" style = "width:100%" alt = "Boone, North Carolina">
+		<p class = "text">slide 1</p>
+	</div>
+
+    <div class = "mySlides">
+    	<img src = "images/blu_marble_hurricanes.png" style = "width:100%" alt = "ArcGIS Hurricanes">
+    	<p class = "text">slide 2</p>
+    </div>
+
+    <div class = "mySlides">
+    	<img src = "images/SanJuanContourLarge1.png" style = "width:100%" alt = "SanJuan Islands Contours">
+    	<p class = "text">slide 3</p>
+    </div>
+
+    <div class = "dots">
+    	<span class = "dot" onclick = 'currentSlide(1)'></span>
+    	<span class = "dot" onclick = 'currentSlide(2)'></span>
+    	<span class = "dot" onclick = 'currentSlide(3)'></span>
+    	<span class = "dot" onclick = 'currentSlide(4)'></span>
+    </div>
+</div>
+
+<section class = "stuff">
+	<h1 id = "aboutme">About Me</h1>
+	<p>My name is Ian Gard</p>
+	<h2>Education</h2>
+	<p>Bachelors of Science in Geography with a concentration in Geographic Information Systems from Appalachian State Unviersity.</p>
+	<hr>
+	<h1 id = "resume">Resume</h1>
+	<iframe src = "other-content/Resume2020.pdf"></iframe><br>
+	<a href = "other-content/Resume2020.pdf" target="_blank" download = "Ian Gard Resume">Download my resume</a>
+	<h2>Experience</h2>
+	<ul>
+	<li>Currently employed as a GIS Associate for Sunvest Solar Inc, a solar energy developer based out of Pewaukee, Wisconsin.  I assist with geodatabse organization and site suitability/site selection for solar array development.<br></li>
+
+	<li>January 2019-January 2020 interned for Here Technologies as a Regional Mapping Content Intern for a change detection team.  Assisting with GIS geometry edits, data webscraping with Python, and internal database ETL.<br></li>
+
+	<li>May 2017-August 2017/May2018-December 2018 Held a GIS internship with the Village of Algonquin Public Works Department.  Responsible for collecting, uploading and editing GPS/GIS data in the cities online asset management system.</li></ul>
+	<hr>
+
+	<map name =m1><area shape=rect coords="170,5,195,30" href=#img1 alt ="#"></map>
+	<map name = m2><area shape = rect coords="170,5,195,30" href=#img2 alt = "#"></map>
+	
+	<h1 id = "projects">Projects</h1>
+	<section id = "project1">
+
+
+  <img id = img1 class = "projectimg" src = "images/RemoteSensingSample.png" alt = "RemoteSensingSample"><br>
+	<a href = "other-content/RemoteSensingSample.pdf" target="_blank" id = "glacier-link" download = "Remote Sensing Sample">Hubbard Glacier Change Detection Analysis (Remote Sensing Sample)</a><br>
+</section>
+
+    <section id = "project2">
+	<img id = "img2" class = "projectimg" src = "images/mt-rainier-project.jpg" alt = 'mt-rainier-project'><br>
+    <a href = "other-content/GISsample.pdf" target="_blank" download="GIS Sample">Mt Rainier Glacial Recession (GIS Sample)</a>
+    <hr>
+</section>
+
+    
+	<h1 id = "contact">Contact</h1>
+	<section class = "contact form">
+		<form action = "action_page.php">
+
+		<label for="name">Name</label>
+		<input type = "text" id = "name">
+
+		<label for="email">Email</label>
+		<input type = "text" id = "email">
+
+		<label for="subject">Subject</label>
+		<input type = "text" id = "subject">
+
+		<label for ="message">Message</label>
+		<textarea id = "message" name = "message" style = "height:10em"></textarea>
+		<input type = "submit" value = "Submit">
+	</form></section>
+	
+</section> 
+
+<footer class = "footer">
+    <ul class = "linkedin">
+        <li><a href = "https://www.linkedin.com/in/ian-gard-a309a9121" target = "_blank"><i class = "fa fa-linkedin fa-2x"></i></a></li>
+    </ul>
+        <small>&copy; Ian Gard 2020</small>
+</footer>
+</main>
+</body>
+
+

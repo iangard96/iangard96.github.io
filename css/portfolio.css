@@ -1,0 +1,262 @@
+html, body{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  font-family: Quattrocento Sans;
+  font-size: 1rem;
+  }
+
+.wrapper{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  grid-template-rows:repeat(3, 1fr, 1fr, .25fr);
+  grid-template-areas: 
+  "nav slideshow slideshow slideshow slideshow"
+  "nav stuff stuff stuff stuff"
+  "footer footer footer footer footer"
+}
+
+ nav{
+  grid-area:nav;
+  margin:0;
+  padding:0;
+  background-color:#778899;
+  height:100%;
+}
+
+ nav h1{
+  text-align: left;
+  font-size:1.75rem;
+  font:bold;
+  padding-left:1rem;
+  padding-top: 1rem;
+  margin-bottom: 0;
+  border-top:1px solid white;
+}
+ nav h2{
+  text-align: left;
+  font-size:1.5rem;
+  padding-left:1rem;
+  padding-bottom: 1rem;
+  margin-top: 0;
+  border-bottom:1px solid white;
+}
+#navContents{
+  position: sticky;
+  top:5rem;
+}
+
+#navHeading{
+  margin-top: 5rem;
+}
+
+#navLinks{
+  position: sticky;
+  top:2rem;
+  margin-top:2rem;
+}
+
+ nav a{
+  display:block;
+  color:#000;
+  text-decoration:none;
+  margin-top:.5rem;
+  padding:1rem;
+  font-size: 1rem;
+}
+
+ nav a.active{
+  background-color:#555;
+  color:white;
+}
+ 
+ nav a:hover:not(.active){
+  background-color:#555;
+  color:white;
+}
+
+.slideshow{
+  grid-area:slideshow;
+  height:100vh;
+  margin:0;
+  padding:0;
+}
+
+.mySlides{
+  display:none;
+  height: 100vh;
+}
+
+.mySlides > img{
+  object-fit: cover;
+  width:100%;
+  height: 100vh;
+}
+
+.intro-text{
+  color:#f2f2f2;
+  font-size:5rem;
+  position: relative;
+  text-align: center;
+  margin-top: -20rem;
+  margin-bottom: 5rem;
+}
+
+.text{
+  color:#f2f2f2;
+  font-size:1.5rem;
+  position: relative;
+  text-align: center;
+  margin-top: -5rem;
+  margin-bottom: 5rem;
+}
+
+.dots{
+  text-align: center;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+.dot{
+  cursor: pointer;
+  height:1rem;
+  width:1rem;
+  background-color:#bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition:background-color .5s ease;
+  position:relative;
+}
+
+.active, .dot:hover{
+  background-color: #717171;
+}
+
+.stuff{
+  grid-area: stuff;
+  background:url('../images/topography.png');
+  padding:1rem;
+}
+
+.footer{
+  grid-area:footer;
+  background-color:#778899;
+  text-align: left;
+}
+
+.linkedin{
+  list-style-type: none;
+  padding:.25rem;
+  margin:.25rem;
+}
+
+.fa-linkedin:hover{
+  color:#0000FF;
+  transition:.5s;
+}
+.fa-linkedin{
+  transition:.5s;
+  color:white;
+}
+
+.projectimg{
+  width:25%;
+  height:15%;
+}
+
+.projectimg{
+  border-radius: 2px;
+    box-shadow: 0 0 5px #343436;
+    filter:brightness(1.1);
+}
+
+.projectimg:hover{
+  transform: scale(1.5);
+  margin-left: 4rem;
+}
+
+#project1{
+  margin-bottom: 2rem;
+}
+
+hr{
+  margin:3rem;
+}
+
+input[type=text], select, textarea{
+  width:95%;
+  position:relative;
+  padding:1rem;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  resize:vertical;
+}
+
+input[type=submit]{
+  padding:.5rem;
+  border-radius:.5rem;
+  cursor:pointer;
+}
+
+input[type=submit]:hover{
+  background-color: #A9A9A9;
+}
+
+a:link{
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 700px){
+   .wrapper{
+    grid-template-columns:1fr;
+    grid-template-rows:1fr, 1fr, 1fr, .25fr;
+    grid-template-areas: 
+    "nav"
+    "slideshow"
+    "stuff"
+    "footer"
+   }
+
+   nav{ 
+    width:100%;
+    height:auto;
+    position: relative;
+    text-align: center;
+  }
+   nav a{
+    text-align: center;
+    /*float:center;*/
+    display:inline-block;
+  }
+
+  nav h1{
+    text-align: center;
+  }
+  nav h2{
+    text-align: center;
+  }
+
+  .intro-text{
+    font-size: 5rem;
+    margin-top: -19rem;
+}
+
+.projectimg:hover{
+  transform: scale(1.5);
+  margin-left:2rem;
+}
+
+@media screen and (max-width: 500px){
+   nav a{
+    text-align: center;
+    float:none;
+    display:block;
+ }
+}
